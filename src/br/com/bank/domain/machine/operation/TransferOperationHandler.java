@@ -1,10 +1,7 @@
 package br.com.bank.domain.machine.operation;
 
-import br.com.bank.config.UserToken;
 import br.com.bank.domain.bank.Bank;
 import br.com.bank.domain.bank.account.exception.AccountException;
-
-import java.math.BigDecimal;
 
 /**
  * Class comments go here...
@@ -12,16 +9,14 @@ import java.math.BigDecimal;
  * @author focus
  * @version 1.0 31/08/2017
  */
-public class ConsultOperationHandler extends OperationHandler {
+public class TransferOperationHandler extends OperationHandler {
 
-    public ConsultOperationHandler(final Bank bank) {
+    public TransferOperationHandler(final Bank bank) {
         super(bank);
     }
 
     @Override
     public String executeOperation(final OperationParameters operationParameters) throws AccountException {
-        final UserToken userToken = operationParameters.getOrigin();
-        final BigDecimal balance = getBank().consultBalance(userToken.getId());
-        return "Balance: " + balance.toString();
+        return null;
     }
 }

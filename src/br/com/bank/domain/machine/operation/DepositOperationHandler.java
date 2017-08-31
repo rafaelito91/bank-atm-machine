@@ -12,16 +12,14 @@ import java.math.BigDecimal;
  * @author focus
  * @version 1.0 31/08/2017
  */
-public class ConsultOperationHandler extends OperationHandler {
+public class DepositOperationHandler extends OperationHandler {
 
-    public ConsultOperationHandler(final Bank bank) {
+    public DepositOperationHandler(final Bank bank) {
         super(bank);
     }
 
     @Override
     public String executeOperation(final OperationParameters operationParameters) throws AccountException {
-        final UserToken userToken = operationParameters.getOrigin();
-        final BigDecimal balance = getBank().consultBalance(userToken.getId());
-        return "Balance: " + balance.toString();
+        return null;
     }
 }

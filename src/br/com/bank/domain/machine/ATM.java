@@ -29,7 +29,7 @@ public class ATM {
     public ATM(final Bank bank, final Money money) {
         this.myBank = bank;
         this.moneyCapacity = money;
-        initializeOpeations();
+        initializeOperations(bank);
     }
 
     public UserToken login(final String accountId) throws AccountException {
@@ -49,8 +49,12 @@ public class ATM {
         handler.executeOperation(userToken);
     }
 
-    private void initializeOpeations() {
-        operations.put(MenuItem.CONSULT, new ConsultOperationHandler());
-        operations.put(MenuItem.EXIT, new ExitOperationHandler());
+    private void initializeOperations(final Bank bank) {
+        operations.put(MenuItem.CONSULT, new ConsultOperationHandler(bank));
+        operations.put(MenuItem.WITHDRAW, new );
+        operations.put(MenuItem.DEPOSIT, new );
+        operations.put(MenuItem.TRANSFER, new );
+        operations.put(MenuItem.STATEMENT, new );
+        operations.put(MenuItem.EXIT, new ExitOperationHandler(bank));
     }
 }
