@@ -43,6 +43,8 @@ public class ApplicationRunner {
                 }
             }
 
+            ApplicationPrinter.printUserLogout();
+
         }
     }
 

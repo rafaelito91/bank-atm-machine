@@ -55,4 +55,7 @@ public class ApplicationPrinter {
         System.out.println("Invalid Option, please choose again");
     }
 
+    public static void printUserLogout() {
+        System.out.println("You have logged out\n\n");
+    }
 }

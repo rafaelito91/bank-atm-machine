@@ -7,13 +7,15 @@ import java.util.Scanner;
  */
 public class ApplicationReader {
 
-    private static Scanner reader = new Scanner(System.in);
-
     public static String readString() {
-        return reader.nextLine();
+        return getReader().nextLine();
     }
 
     public static Integer readInteger() {
-        return new Integer(reader.nextInt());
+        return new Integer(getReader().nextInt());
+    }
+
+    private static Scanner getReader() {
+        return new Scanner(System.in);
     }
 }
